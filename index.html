@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陈景浩 | Chen Jinghao</title>
+<meta name="description" content="陈景浩的个人主页 — 浙江工商大学萨塞克斯人工智能学院通信工程专业本科生，研究方向：基于多源信息融合的智能无人系统控制。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23111' stroke-width='7'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' font-family='serif' font-weight='bold' fill='%23111'%3E陈%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --ink: #212121;
+    --body: #383838;
+    --muted: #767676;
+    --faint: #9a9a9a;
+    --rule: #e8e8e8;
+    --paper: #ffffff;
+    --maxw: 1120px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: Georgia, "Times New Roman", "Source Han Serif SC", "Noto Serif SC", "Songti SC", SimSun, serif;
+    font-size: 17px;
+    line-height: 1.85;
+    color: var(--body);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: #212121; color: #fff; }
+
+  a { color: var(--ink); text-decoration: none; }
+
+  .layout {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 4.5rem;
+  }
+
+  /* ===== 侧栏 ===== */
+  .sidebar {
+    width: 230px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    padding-top: 2.6rem;
+  }
+
+  .site-title {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+  }
+
+  .site-sub {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--faint);
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .logo {
+    width: 118px;
+    height: 118px;
+    border: 4px solid var(--ink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Source Han Serif SC", "Songti SC", SimSun, serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 2.1rem 0 1.9rem;
+    user-select: none;
+  }
+
+  .contact { list-style: none; }
+
+  .contact li { margin-bottom: 0.72rem; }
+
+  .contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-style: italic;
+    font-size: 15.5px;
+    color: var(--muted);
+    transition: color 0.15s ease;
+  }
+
+  .contact a:hover { color: var(--ink); }
+
+  .contact svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+
+  /* ===== 顶栏导航 ===== */
+  .main { flex: 1; max-width: 700px; min-width: 0; padding-top: 2.6rem; }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    margin-bottom: 4.2rem;
+  }
+
+  .nav a {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .nav a:hover { border-color: var(--ink); }
+
+  /* ===== 正文区块 ===== */
+  section { margin-bottom: 3.6rem; scroll-margin-top: 1.5rem; }
+
+  section:not(:last-of-type)::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: var(--rule);
+    margin-top: 3.4rem;
+  }
+
+  h1 {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    margin-bottom: 1.6rem;
+  }
+
+  h2 {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 1.15rem;
+  }
+
+  h2 .en {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--faint);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-left: 0.7rem;
+    vertical-align: 0.35em;
+  }
+
+  p { margin-bottom: 1.05rem; }
+
+  p:last-child { margin-bottom: 0; }
+
+  strong { color: var(--ink); }
+
+  .plain ul {
+    list-style: square;
+    padding-left: 1.5rem;
+  }
+
+  .plain li { margin-bottom: 0.45rem; }
+  .plain li:last-child { margin-bottom: 0; }
+
+  /* ===== 教育背景 ===== */
+  .edu-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .edu-line .school {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 18px;
+  }
+
+  .edu-line .time { color: var(--muted); font-size: 15px; white-space: nowrap; }
+
+  .edu-meta { color: var(--muted); font-size: 15.5px; margin-top: 0.15rem; }
+
+  /* ===== 项目 ===== */
+  .proj { margin-bottom: 1.9rem; }
+  .proj:last-child { margin-bottom: 0; }
+
+  .proj-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .proj-head h3 {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .badge {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    padding: 0.05rem 0.5rem;
+    white-space: nowrap;
+  }
+
+  .badge.soft { color: var(--muted); border-color: #c9c9c9; font-weight: 600; }
+
+  .proj p { margin-top: 0.45rem; margin-bottom: 0; font-size: 16px; line-height: 1.75; }
+
+  .tags { margin-top: 0.55rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+  .tags span {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    background: #f4f4f4;
+    border-radius: 3px;
+    padding: 0.08rem 0.55rem;
+    white-space: nowrap;
+  }
+
+  /* ===== 获奖 / 动态 ===== */
+  .list { list-style: none; }
+
+  .list li {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.42rem 0;
+  }
+
+  .list .when {
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 14.5px;
+    width: 4.6em;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .list .what { flex: 1; }
+  .list .what .role { color: var(--muted); font-size: 15px; }
+
+  /* ===== 页脚 ===== */
+  footer {
+    border-top: 1px solid var(--rule);
+    margin-top: 1rem;
+    padding: 1.6rem 0 2.8rem;
+    font-size: 14px;
+    color: var(--faint);
+  }
+
+  footer a { color: var(--muted); font-style: italic; }
+  footer a:hover { color: var(--ink); }
+
+  /* ===== 移动端 ===== */
+  @media (max-width: 860px) {
+    .layout { flex-direction: column; gap: 0; padding: 0 1.4rem; }
+    .sidebar {
+      position: static;
+      height: auto;
+      width: auto;
+      padding-top: 2.2rem;
+    }
+    .logo { margin: 1.6rem 0 1.4rem; }
+    .main { padding-top: 0; max-width: none; }
+    .nav { margin-bottom: 3rem; gap: 1.1rem; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 25px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ========== 侧栏 ========== -->
+  <aside class="sidebar">
+    <div class="site-title">陈景浩</div>
+    <div class="site-sub">Chen Jinghao</div>
+
+    <div class="logo" aria-hidden="true">陈</div>
+
+    <ul class="contact">
+      <li>
+        <a href="mailto:13757877973@163.com">
+          <svg viewBox="0 0 16 16"><path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.2L8 7.5.0 3.2ZM0 5.4V13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4L8.5 9.4a1 1 0 0 1-1 0Z"/></svg>
+          Email
+        </a>
+      </li>
+      <li>
+        <a href="assets/cv.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16"><path d="M4 0h5l5 5v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2Zm5 1.5V5h3.5Z"/></svg>
+          简历 CV
+        </a>
+      </li>
+      <!-- 想加其他链接（GitHub / 知乎 / LinkedIn），复制下面这一行改文字与 href 即可：
+      <li><a href="https://github.com/你的用户名"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.42 7.42 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a></li>
+      -->
+    </ul>
+  </aside>
+
+  <!-- ========== 正文 ========== -->
+  <main class="main">
+
+    <nav class="nav">
+      <a href="#about">关于我</a>
+      <a href="#interests">研究兴趣</a>
+      <a href="#projects">项目经历</a>
+      <a href="#awards">获奖荣誉</a>
+      <a href="#news">最新动态</a>
+    </nav>
+
+    <section id="about" class="plain">
+      <h1>关于我</h1>
+      <p>你好！我是<strong>陈景浩</strong>，浙江工商大学萨塞克斯人工智能学院 2023 级<strong>通信工程（中英联合办学）</strong>专业本科生，2027 年 6 月毕业。目前综合排名 <strong>13/199（前 8%）</strong>，加权平均分 86.5（GPA 3.65/5）。</p>
+      <p>我喜欢把想法做成真正能跑起来的机器：从电赛的自动瞄准装置、麦克纳姆轮超市机器人，到气垫越野智能车，我大多以队长身份负责控制算法与嵌入式开发。在一次次调试中，我找到了自己在<strong>控制系统与机器人</strong>方向上的热情——我做事有耐心、乐于排查问题，也享受机器真正动起来的那一刻。</p>
+      <p>如果你对我的任何经历感兴趣，欢迎通过左侧邮箱与我交流。</p>
+    </section>
+
+    <section id="interests" class="plain">
+      <h2>研究兴趣<span class="en">Research Interests</span></h2>
+      <ul>
+        <li>基于多源信息融合的智能无人系统控制（感知–决策–控制闭环）</li>
+        <li>运动控制与机器人：多闭环 PID、姿态融合、轨迹规划</li>
+        <li>嵌入式系统与端侧智能部署</li>
+        <li>SLAM 与多传感器融合定位</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>教育背景<span class="en">Education</span></h2>
+      <div class="edu-line">
+        <span class="school">浙江工商大学 · 萨塞克斯人工智能学院</span>
+        <span class="time">2023.09 – 2027.06</span>
+      </div>
+      <div class="edu-meta">通信工程（中英联合办学） · 综合排名 13/199（前 8%） · 专业排名 20/103 · GPA 3.65/5 · CET-4 523</div>
+    </section>
+
+    <section id="projects">
+      <h2>项目经历<span class="en">Projects</span></h2>
+
+      <div class="proj">
+        <div class="proj-head">
+          <h3>简易自行瞄准装置</h3>
+          <span class="badge">全国大学生电子设计竞赛 · 国家二等奖</span>
+          <span class="badge soft">队长（1/3）</span>
+        </div>
+        <p>TI MSPM0 循迹底盘 + K230 视觉云台：串级与并联 PID 多闭环控制，四点逆透视变换解算靶纸中心；增量式 PID 部署与底盘前馈补偿速度环；自制移位寄存器扩展 9 路灰度循迹，ICM42688 陀螺仪经 SPI + DMA 高速采集并做角度前馈补偿。</p>
+        <div class="tags"><span>TI MSPM0</span><span>K230</span><span>PID</span><span>机器视觉</span><span>ICM42688</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head">
+          <h3>麦克纳姆轮超市机器人</h3>
+          <span class="badge">浙江省大学生机器人竞赛 · 省一等奖</span>
+          <span class="badge soft">队长（1/3）</span>
+        </div>
+        <p>STM32F427 运动学建模与闭环整定，Mahony 姿态融合与 CMSIS-DSP 硬件加速浮点；CAN 总线适配大疆 C620 电调，串口 DMA 双缓冲抗丢包；K230 视觉并行部署压缩 1/5 任务耗时；4 路 TOF 融合实现定点导航、货架对位与自主避障。</p>
+        <div class="tags"><span>STM32F427</span><span>CAN</span><span>Mahony</span><span>TOF 融合</span><span>CMSIS-DSP</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head">
+          <h3>气垫越野智能车</h3>
+          <span class="badge">全国大学生智能车竞赛 · 浙江省第四名</span>
+          <span class="badge soft">机械设计 / 控制算法 / 嵌入式底层</span>
+        </div>
+        <p>STC32G12K128 主控，4 路无刷电机实现差动转向与气垫悬浮；航向串级 PID（外环 CCD 循迹偏差，内环陀螺仪角速度负反馈，微分项随车速自适应）+ 增量式速度环；线阵 CCD 循迹、GPS 航点定位与 LoRa 无线调试，支持在线调参与参数掉电保存。</p>
+        <div class="tags"><span>STC32G</span><span>无刷电机</span><span>串级 PID</span><span>CCD 循迹</span><span>GPS / LoRa</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head">
+          <h3>ROS 家庭助老服务机器人</h3>
+          <span class="badge soft">系统集成与调度开发</span>
+        </div>
+        <p>三轮全向底盘运动学解算与轮式里程计，九轴 IMU + 扩展卡尔曼滤波（EKF）位姿融合；系统集成 GMapping 建图、AMCL 定位与 DWA 局部规划等 ROS 功能包；TTS 语音交互与 AprilTag 站点校验。</p>
+        <div class="tags"><span>ROS</span><span>EKF</span><span>激光雷达</span><span>DWA</span><span>AprilTag</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-head">
+          <h3>造梦者（浙江）科技 · 嵌入式软件实习</h3>
+          <span class="badge soft">2026.07 – 2026.08</span>
+        </div>
+        <p>全屋智能 EMS 热泵主控板：GD32（C）+ ESP32（Rust）节点式工作流引擎与设备–云双向联动；重构 485 通信轮询，将控制延迟从 24.9 s 降至 4.1 s；搭建 Modbus 自动化测试体系。</p>
+        <div class="tags"><span>GD32</span><span>ESP32 / Rust</span><span>485 / Modbus</span><span>EMS</span></div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>获奖荣誉<span class="en">Awards</span></h2>
+      <ul class="list">
+        <li><span class="when">2026</span><span class="what">浙江省大学生机器人竞赛 · 省一等奖 <span class="role">（队长）</span></span></li>
+        <li><span class="when">2025</span><span class="what">全国大学生电子设计竞赛 · 国家二等奖 <span class="role">（队长）</span></span></li>
+        <li><span class="when">2025</span><span class="what">全国大学生智能车竞赛（气垫越野组）· 浙江省第四名</span></li>
+        <li><span class="when">2024</span><span class="what">浙江省大学生物理（理论创新）竞赛 · 省二等奖</span></li>
+        <li><span class="when">2024</span><span class="what">学术科研奖学金</span></li>
+        <li><span class="when">2023</span><span class="what">能力突出奖学金</span></li>
+      </ul>
+    </section>
+
+    <section id="news">
+      <h2>最新动态<span class="en">News</span></h2>
+      <ul class="list">
+        <li><span class="when">2026.09</span><span class="what">毕业设计方向确定为机械臂控制</span></li>
+        <li><span class="when">2026.08</span><span class="what">完成造梦者（浙江）科技嵌入式软件实习：485 通信轮询重构、Modbus 自动化测试体系</span></li>
+        <li><span class="when">2026</span><span class="what">获浙江省大学生机器人竞赛省一等奖（队长，麦克纳姆轮超市机器人）</span></li>
+        <li><span class="when">2025</span><span class="what">获全国大学生电子设计竞赛国家二等奖（队长，简易自行瞄准装置）</span></li>
+        <li><span class="when">2025</span><span class="what">全国大学生智能车竞赛浙江省第四名（气垫越野组）</span></li>
+        <li><span class="when">2024</span><span class="what">获学术科研奖学金；浙江省物理（理论创新）竞赛省二等奖</span></li>
+        <li><span class="when">2023</span><span class="what">获能力突出奖学金</span></li>
+      </ul>
+    </section>
+
+    <footer>
+      © 2026 陈景浩 · 由 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> 托管 · 手写 HTML/CSS 实现，版式参考自 Jekyll 的 Minimal Mistakes 主题
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>
