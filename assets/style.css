@@ -196,8 +196,56 @@ strong { color: var(--ink); }
 .edu-meta { color: var(--muted); font-size: 15.5px; margin-top: 0.15rem; }
 
 /* ===== 项目 ===== */
-.proj { margin-bottom: 1.9rem; }
+.proj {
+  position: relative;
+  margin-bottom: 1.9rem;
+  padding: 1.15rem 1.35rem;
+  margin-left: -1.35rem;
+  margin-right: -1.35rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease, background-color 0.18s ease;
+}
+
 .proj:last-child { margin-bottom: 0; }
+
+/* 整卡可点：标题链接的覆盖层铺满整张卡片 */
+.proj-head h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* 「图文详情」保留在覆盖层之上，维持自己的 hover 变色 */
+.proj .more { position: relative; z-index: 2; }
+
+@media (hover: hover) {
+  .proj:hover {
+    background: #fcfcfc;
+    border-color: var(--rule);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px) scale(1.01);
+  }
+
+  .proj:hover .proj-head h3 a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+
+  .proj:hover .more a { color: var(--ink); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proj { transition: none; }
+
+  .proj:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
 
 .proj-head {
   display: flex;
