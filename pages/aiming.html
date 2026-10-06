@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简易自行瞄准装置 | 陈景浩</title>
+<meta name="description" content="2025 全国大学生电子设计竞赛国家二等奖作品：TI MSPM0 循迹底盘 + K230 视觉云台的自动瞄准装置。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23111' stroke-width='7'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' font-family='serif' font-weight='bold' fill='%23111'%3E陈%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="detail">
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <a class="site-title" href="../index.html">陈景浩</a>
+    <div class="site-sub">Chen Jinghao</div>
+
+    <div class="logo" aria-hidden="true">陈</div>
+
+    <ul class="contact">
+      <li>
+        <a href="mailto:13757877973@163.com">
+          <svg viewBox="0 0 16 16"><path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.2L8 7.5.0 3.2ZM0 5.4V13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4L8.5 9.4a1 1 0 0 1-1 0Z"/></svg>
+          Email
+        </a>
+      </li>
+      <li>
+        <a href="../assets/cv.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16"><path d="M4 0h5l5 5v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2Zm5 1.5V5h3.5Z"/></svg>
+          简历 CV
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <nav class="nav">
+      <a href="../index.html">← 返回主页</a>
+      <a href="../index.html#projects">全部项目</a>
+    </nav>
+
+    <section>
+      <h1>简易自行瞄准装置</h1>
+      <div class="badges">
+        <span class="badge">全国大学生电子设计竞赛 · 国家二等奖</span>
+        <span class="badge soft">队长（1/3）</span>
+        <span class="badge soft">2025 年</span>
+      </div>
+
+      <p>赛题要求装置在梯形场地上自主循迹行进，并对 A4 紫外感光靶纸完成「搜索—瞄准—打击」：以 <strong>TI MSPM0</strong> 为核心构建两轮差速循迹底盘，<strong>K230 视觉云台</strong>通过四点逆透视变换解算靶纸中心，引导激光完成瞄准，全流程自主完成。</p>
+      <p>作为队长，我负责<strong>整车机械结构搭建与控制算法开发</strong>。</p>
+
+      <h2>底盘控制</h2>
+      <ul class="plain" style="padding-left:1.5rem;list-style:square">
+        <li>角度环 → 角速度环 → 轮速环<strong>三级串级 PID</strong>，200 Hz 实时闭环；增量式 PID 部署与底盘前馈补偿速度环。</li>
+        <li>自制移位寄存器扩展 <strong>9 路灰度循迹</strong>；绝对值编码器滑动均值滤波提升速度反馈精度。</li>
+        <li>底盘转向时向云台输出<strong>角度前馈补偿</strong>，抵消车身姿态突变对瞄准的影响。</li>
+      </ul>
+
+      <h2>云台与视觉</h2>
+      <ul class="plain" style="padding-left:1.5rem;list-style:square">
+        <li>基于 K230 检测结果设计<strong>双轴增量式 PID</strong>，四点逆透视变换解算靶纸中心。</li>
+        <li>串并级复合 PID + 抗积分饱和抑制超调。</li>
+        <li><strong>ICM42688</strong> 陀螺仪经 SPI + DMA 高速采集，姿态解算结果参与云台稳定。</li>
+      </ul>
+
+      <figure>
+        <img src="../assets/projects/aiming-field.png" alt="赛题示意图：梯形场地与紫外感光靶纸">
+        <figcaption>赛题示意：梯形场地与 A4 紫外感光靶纸</figcaption>
+      </figure>
+
+      <div class="media-grid">
+        <figure>
+          <img src="../assets/projects/aiming-hardware.jpg" alt="装置实物图">
+          <figcaption>装置实物：9 路灰度循迹 + 两轴激光云台</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/projects/aiming-control-diagram.png" alt="控制系统框图（手绘）">
+          <figcaption>控制系统框图（手绘草稿）</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="pager">
+      <a href="mecanum.html">下一个项目：麦克纳姆轮超市机器人 →</a>
+    </div>
+
+    <footer>
+      © 2026 陈景浩 · <a href="../index.html">返回主页</a>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>

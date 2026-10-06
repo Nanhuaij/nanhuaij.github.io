@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>气垫越野智能车 | 陈景浩</title>
+<meta name="description" content="2025 全国大学生智能车竞赛浙江省第四名作品：四风机气垫越野智能车，CCD 循迹、GPS 航点与 IMU 航向融合。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23111' stroke-width='7'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' font-family='serif' font-weight='bold' fill='%23111'%3E陈%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="detail">
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <a class="site-title" href="../index.html">陈景浩</a>
+    <div class="site-sub">Chen Jinghao</div>
+
+    <div class="logo" aria-hidden="true">陈</div>
+
+    <ul class="contact">
+      <li>
+        <a href="mailto:13757877973@163.com">
+          <svg viewBox="0 0 16 16"><path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.2L8 7.5.0 3.2ZM0 5.4V13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4L8.5 9.4a1 1 0 0 1-1 0Z"/></svg>
+          Email
+        </a>
+      </li>
+      <li>
+        <a href="../assets/cv.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16"><path d="M4 0h5l5 5v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2Zm5 1.5V5h3.5Z"/></svg>
+          简历 CV
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <nav class="nav">
+      <a href="../index.html">← 返回主页</a>
+      <a href="../index.html#projects">全部项目</a>
+    </nav>
+
+    <section>
+      <h1>气垫越野智能车</h1>
+      <div class="badges">
+        <span class="badge">全国大学生智能车竞赛 · 浙江省第四名</span>
+        <span class="badge soft">气垫越野组</span>
+        <span class="badge soft">2025 年</span>
+      </div>
+
+      <p>气垫越野组的<strong>四风机气垫车</strong>：双 2207 推进风扇差动转向、双 2205 升力风机悬浮，需在赛道上全自主完成往返竞速、八字绕桩、特殊路况等科目。我负责<strong>机械结构设计、控制算法与嵌入式底层开发</strong>。</p>
+
+      <h2>机械设计</h2>
+      <ul class="plain" style="padding-left:1.5rem;list-style:square">
+        <li>PETG 3D 打印涵道 / 螺旋桨罩 + 玻璃纤维底板 + PVC 水管车体。</li>
+        <li>2207 推力风扇与 2205 抬升风机的四电机布局设计与装配。</li>
+      </ul>
+
+      <h2>控制算法</h2>
+      <ul class="plain" style="padding-left:1.5rem;list-style:square">
+        <li><strong>航向串级 PID</strong>：外环 CCD 循迹偏差 / 目标航向角差，内环 IMU963RA 陀螺仪角速度负反馈，微分项随车速自适应。</li>
+        <li><strong>控制分配</strong>：左右推进风机差动转向，升力风机转向协同补偿保持气垫姿态。</li>
+        <li><strong>增量式速度环</strong>：编码器闭环；三科目任务分段速度策略。</li>
+      </ul>
+
+      <h2>嵌入式底层</h2>
+      <ul class="plain" style="padding-left:1.5rem;list-style:square">
+        <li><strong>STC32G12K128</strong> 中断架构与 IMU / CCD / GPS（TAU1201 航点）/ LoRa 驱动。</li>
+        <li>屏幕菜单在线调参，参数掉电保存；线阵 CCD 循迹。</li>
+      </ul>
+
+      <figure>
+        <img src="../assets/projects/hovercraft-cad.jpg" alt="气垫车三维渲染图" loading="lazy">
+        <figcaption>整机三维模型：双推进风扇（差动转向）+ 双升力风机（气垫悬浮）</figcaption>
+      </figure>
+
+      <div class="media-grid">
+        <figure>
+          <img src="../assets/projects/hovercraft-photo-2.jpg" alt="气垫车实物俯视图">
+          <figcaption>3D 打印涵道与四电机布局</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/projects/hovercraft-photo-1.jpg" alt="气垫车底部实物">
+          <figcaption>车底：升力风道与围裙</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/projects/hovercraft-photo-3.jpg" alt="涵道与电机装配">
+          <figcaption>螺旋桨罩与无刷电机装配</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/projects/hovercraft-team.png" alt="整装待发">
+          <figcaption>加装 GPS 天线与 LoRa 模块后的整车</figcaption>
+        </figure>
+      </div>
+
+      <figure>
+        <video controls preload="metadata" playsinline src="../assets/projects/hovercraft-field-test.mp4"></video>
+        <figcaption>户外场外测试：木栈道循迹与航点行驶</figcaption>
+      </figure>
+
+      <figure>
+        <video controls preload="metadata" playsinline src="../assets/projects/hovercraft-race.mp4"></video>
+        <figcaption>赛道实录：田径场科目行驶</figcaption>
+      </figure>
+
+      <div class="media-grid">
+        <figure>
+          <img src="../assets/projects/hovercraft-course1-race.gif" alt="科目一 往返竞速">
+          <figcaption>科目一：往返竞速</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/projects/hovercraft-course2-slalom.gif" alt="科目二 八字绕桩">
+          <figcaption>科目二：八字绕桩</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/projects/hovercraft-course3-terrain.gif" alt="科目三 特殊路况">
+          <figcaption>科目三：特殊路况</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/projects/hovercraft-course-map.png" alt="科目二赛道示意">
+          <figcaption>科目二赛道示意：绕锥走线</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="pager">
+      <a href="mecanum.html">← 上一个：麦克纳姆轮超市机器人</a>
+      <a href="ros.html">下一个：ROS 家庭助老服务机器人 →</a>
+    </div>
+
+    <footer>
+      © 2026 陈景浩 · <a href="../index.html">返回主页</a>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>

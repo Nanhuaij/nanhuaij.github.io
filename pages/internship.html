@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>造梦者（浙江）科技 · 嵌入式软件实习 | 陈景浩</title>
+<meta name="description" content="造梦者（浙江）科技嵌入式软件实习生：全屋智能 EMS 主控板开发，GD32 + ESP32 双端架构，485 通信重构与 Modbus 自动化测试。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='none' stroke='%23111' stroke-width='7'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' font-family='serif' font-weight='bold' fill='%23111'%3E陈%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="detail">
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <a class="site-title" href="../index.html">陈景浩</a>
+    <div class="site-sub">Chen Jinghao</div>
+
+    <div class="logo" aria-hidden="true">陈</div>
+
+    <ul class="contact">
+      <li>
+        <a href="mailto:13757877973@163.com">
+          <svg viewBox="0 0 16 16"><path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v.2L8 7.5.0 3.2ZM0 5.4V13a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4L8.5 9.4a1 1 0 0 1-1 0Z"/></svg>
+          Email
+        </a>
+      </li>
+      <li>
+        <a href="../assets/cv.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16"><path d="M4 0h5l5 5v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2Zm5 1.5V5h3.5Z"/></svg>
+          简历 CV
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <nav class="nav">
+      <a href="../index.html">← 返回主页</a>
+      <a href="../index.html#projects">全部项目</a>
+    </nav>
+
+    <section>
+      <h1>造梦者（浙江）科技 · 嵌入式软件实习</h1>
+      <div class="badges">
+        <span class="badge soft">嵌入式软件实习生</span>
+        <span class="badge soft">2026.07 – 2026.08</span>
+      </div>
+
+      <p>参与「造梦者气候盒子」<strong>EMS 主控板</strong>的进一步开发——一款对热泵、水箱、风机等全屋设备进行云端智能管控的能源管理系统。</p>
+
+      <h2>功能开发</h2>
+      <ul class="plain" style="padding-left:1.5rem;list-style:square">
+        <li><strong>GD32（C）主控 + ESP32（Rust）网关</strong>的节点式工作流引擎：执行队列、超时保护、两阶段轮询、运行日志。</li>
+        <li>设备–云双向联动：MQTT（QoS0 持久会话）下发工作流、回执日志；run_id 防重、notify 上报。</li>
+      </ul>
+
+      <h2>逻辑完善</h2>
+      <ul class="plain" style="padding-left:1.5rem;list-style:square">
+        <li>修改 <strong>485 通信轮询架构</strong>，控制响应延迟从 24.9 s 降至 4.1 s（降低约 83%）。</li>
+      </ul>
+
+      <h2>质量保障</h2>
+      <ul class="plain" style="padding-left:1.5rem;list-style:square">
+        <li>搭建 <strong>Modbus 自动化测试体系</strong>：迭代期间 111 次提交，22 项回归测试全部通过。</li>
+      </ul>
+
+      <div class="media-grid">
+        <figure>
+          <img src="../assets/projects/ems-product.png" alt="造梦者气候盒子产品图" loading="lazy">
+          <figcaption>造梦者气候盒子 EMS 主控设备</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/projects/ems-architecture.png" alt="EMS 双端系统架构图" loading="lazy">
+          <figcaption>EMS 双端系统架构：云端 → ESP32 网关 → GD32 主控 → 末端设备</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <div class="pager">
+      <a href="ros.html">← 上一个：ROS 家庭助老服务机器人</a>
+      <a href="aiming.html">下一个：简易自行瞄准装置 →</a>
+    </div>
+
+    <footer>
+      © 2026 陈景浩 · <a href="../index.html">返回主页</a>
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>
