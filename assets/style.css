@@ -99,6 +99,32 @@ a.site-title:hover { opacity: 0.65; }
 
 .contact svg { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
 
+/* ===== 侧栏项目目录 ===== */
+.toc { margin-top: 2.2rem; }
+
+.toc-title {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--faint);
+  letter-spacing: 0.32em;
+  margin-bottom: 0.9rem;
+}
+
+.toc ul { list-style: none; }
+
+.toc li { margin-bottom: 0.55rem; }
+
+.toc a {
+  font-size: 15px;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.toc a:hover { color: var(--ink); }
+
+.toc a.active { color: var(--ink); font-weight: 700; }
+
 /* ===== 顶栏导航 ===== */
 .main { flex: 1; max-width: 700px; min-width: 0; padding-top: 2.6rem; }
 
