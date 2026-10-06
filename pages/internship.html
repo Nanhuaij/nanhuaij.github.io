@@ -50,11 +50,21 @@
 
       <p>参与「造梦者气候盒子」<strong>EMS 主控板</strong>的进一步开发——一款对热泵、水箱、风机等全屋设备进行云端智能管控的能源管理系统。</p>
 
+      <figure>
+        <img src="../assets/projects/ems-product.png" alt="造梦者气候盒子产品图">
+        <figcaption>造梦者气候盒子 EMS 主控设备</figcaption>
+      </figure>
+
       <h2>功能开发</h2>
       <ul class="plain" style="padding-left:1.5rem;list-style:square">
         <li><strong>GD32（C）主控 + ESP32（Rust）网关</strong>的节点式工作流引擎：执行队列、超时保护、两阶段轮询、运行日志。</li>
         <li>设备–云双向联动：MQTT（QoS0 持久会话）下发工作流、回执日志；run_id 防重、notify 上报。</li>
       </ul>
+
+      <figure>
+        <img src="../assets/projects/ems-architecture.png" alt="EMS 双端系统架构图" loading="lazy">
+        <figcaption>EMS 双端系统架构：云端 → ESP32 网关 → GD32 主控 → 末端设备</figcaption>
+      </figure>
 
       <h2>逻辑完善</h2>
       <ul class="plain" style="padding-left:1.5rem;list-style:square">
@@ -65,17 +75,6 @@
       <ul class="plain" style="padding-left:1.5rem;list-style:square">
         <li>搭建 <strong>Modbus 自动化测试体系</strong>：迭代期间 111 次提交，22 项回归测试全部通过。</li>
       </ul>
-
-      <div class="media-grid">
-        <figure>
-          <img src="../assets/projects/ems-product.png" alt="造梦者气候盒子产品图" loading="lazy">
-          <figcaption>造梦者气候盒子 EMS 主控设备</figcaption>
-        </figure>
-        <figure>
-          <img src="../assets/projects/ems-architecture.png" alt="EMS 双端系统架构图" loading="lazy">
-          <figcaption>EMS 双端系统架构：云端 → ESP32 网关 → GD32 主控 → 末端设备</figcaption>
-        </figure>
-      </div>
     </section>
 
     <div class="pager">

@@ -52,6 +52,11 @@
       <p>赛题要求装置在梯形场地上自主循迹行进，并对 A4 紫外感光靶纸完成「搜索—瞄准—打击」：以 <strong>TI MSPM0</strong> 为核心构建两轮差速循迹底盘，<strong>K230 视觉云台</strong>通过四点逆透视变换解算靶纸中心，引导激光完成瞄准，全流程自主完成。</p>
       <p>作为队长，我负责<strong>整车机械结构搭建与控制算法开发</strong>。</p>
 
+      <figure>
+        <img src="../assets/projects/aiming-field.png" alt="赛题示意图：梯形场地与紫外感光靶纸">
+        <figcaption>赛题示意：梯形场地与 A4 紫外感光靶纸</figcaption>
+      </figure>
+
       <h2>底盘控制</h2>
       <ul class="plain" style="padding-left:1.5rem;list-style:square">
         <li>角度环 → 角速度环 → 轮速环<strong>三级串级 PID</strong>，200 Hz 实时闭环；增量式 PID 部署与底盘前馈补偿速度环。</li>
@@ -69,11 +74,6 @@
       <figure>
         <img src="../assets/projects/aiming-control-architecture.png" alt="控制系统框图：底盘三级串级 PID 与云台视觉伺服">
         <figcaption>控制系统框图：① 底盘三级串级 PID（角度环 → 角速度环 → 轮速环，IMU + Mahony 解算 + 运动学建模）；② 云台 K230 视觉伺服（透视变换解算靶心，增量式 PID + 前馈复合控制）</figcaption>
-      </figure>
-
-      <figure>
-        <img src="../assets/projects/aiming-field.png" alt="赛题示意图：梯形场地与紫外感光靶纸">
-        <figcaption>赛题示意：梯形场地与 A4 紫外感光靶纸</figcaption>
       </figure>
 
       <figure>

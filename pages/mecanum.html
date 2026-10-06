@@ -51,12 +51,22 @@
 
       <p>面向超市货架场景的<strong>全自主机器人</strong>：实现自然语言识别、顾客识别、货品抓取与投放、货架自动补货。作为队长，我负责<strong>整机架构设计与运动控制开发</strong>，以及整机的机械结构设计仿真与装配。</p>
 
+      <figure>
+        <img src="../assets/projects/mecanum-venue.png" alt="超市场地示意">
+        <figcaption>超市场地示意：货架、起点区与终点区</figcaption>
+      </figure>
+
       <h2>运动控制</h2>
       <ul class="plain" style="padding-left:1.5rem;list-style:square">
         <li><strong>STM32F427</strong> 麦克纳姆轮运动学建模与闭环整定：位置环 PID（x / y / yaw 三轴独立）→ 坐标变换 → 麦轮逆运动学 → 速度环 PID ×4，控制周期 5 ms（200 Hz，TIM2 中断）。</li>
         <li>梯形加减速规划（三轴独立，限速限幅）；到位判据 |Δx|、|Δy| ≤ 3 cm 且 |Δyaw| ≤ 2.5°。</li>
         <li><strong>CAN 总线</strong>适配大疆 C620 电调，变参 LUT 限幅 ±4 A 电流指令。</li>
       </ul>
+
+      <figure>
+        <img src="../assets/projects/mecanum-control-diagram.png" alt="控制系统框图">
+        <figcaption>控制系统框图：位置环 → 逆运动学 → 速度环，多源融合定位反馈</figcaption>
+      </figure>
 
       <h2>姿态融合与通信</h2>
       <ul class="plain" style="padding-left:1.5rem;list-style:square">
@@ -71,11 +81,6 @@
         <li>K230 视觉并行部署，压缩 1/5 任务耗时。</li>
       </ul>
 
-      <figure>
-        <img src="../assets/projects/mecanum-control-diagram.png" alt="控制系统框图">
-        <figcaption>控制系统框图：位置环 → 逆运动学 → 速度环，多源融合定位反馈</figcaption>
-      </figure>
-
       <div class="media-grid">
         <figure>
           <img src="../assets/projects/mecanum-structure.png" alt="整机结构设计（CAD）">
@@ -86,11 +91,6 @@
           <figcaption>底盘形变静力学仿真</figcaption>
         </figure>
       </div>
-
-      <figure>
-        <img src="../assets/projects/mecanum-venue.png" alt="超市场地示意">
-        <figcaption>超市场地示意：货架、起点区与终点区</figcaption>
-      </figure>
 
       <figure>
         <video controls preload="metadata" playsinline src="../assets/projects/mecanum-demo.mp4"></video>

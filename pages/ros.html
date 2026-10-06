@@ -50,6 +50,11 @@
 
       <p>面向居家助老场景的<strong>三轮全向底盘 ROS 机器人</strong>，实现建图定位、自主导航与语音交互全流程。我负责<strong>导航定位算法部署与整机联调</strong>。</p>
 
+      <figure>
+        <img src="../assets/projects/ros-hardware.jpg" alt="机器人实物" loading="lazy">
+        <figcaption>校内测试场：定点停靠与避障测试</figcaption>
+      </figure>
+
       <h2>定位建图</h2>
       <ul class="plain" style="padding-left:1.5rem;list-style:square">
         <li>九轴 IMU + <strong>扩展卡尔曼滤波（EKF）</strong>位姿融合（robot_pose_ekf）。</li>
@@ -67,16 +72,10 @@
         <li><strong>TTS 语音播报</strong> + AprilTag 站点校验，到点语音提醒服药。</li>
       </ul>
 
-      <div class="media-grid">
-        <figure>
-          <img src="../assets/projects/ros-hardware.jpg" alt="机器人实物" loading="lazy">
-          <figcaption>校内测试场：定点停靠与避障测试</figcaption>
-        </figure>
-        <figure>
-          <img src="../assets/projects/ros-node-graph.png" alt="ROS 系统节点图" loading="lazy">
-          <figcaption>ROS 系统节点图：雷达 / EKF / move_base / 底盘驱动</figcaption>
-        </figure>
-      </div>
+      <figure>
+        <img src="../assets/projects/ros-node-graph.png" alt="ROS 系统节点图" loading="lazy">
+        <figcaption>ROS 系统节点图：雷达 / EKF / move_base / 底盘驱动</figcaption>
+      </figure>
     </section>
 
     <div class="pager">
